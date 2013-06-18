@@ -10,7 +10,13 @@ cat <<-!
 <link rel="stylesheet" href="gleaner.css" type="text/css" media="all">
 </head>
 <body>
-  <div id="header"></div>
+  <div id="header">
+    <div id="status">
+      <span class="index"></span>
+        <a class="title" href=""></a>
+    </div>
+  </div>
+
   <iframe id="content" src="http://$domain"></iframe>
 
   <div id="gleanings" class="helper">
@@ -22,7 +28,7 @@ cat <<-!
   </div>
 
   <div id="navigation" class="helper">
-  <h2>Navigation</h2>
+  <h2>Mappings</h2>
   <ol class="xoxo presentation">
 !
 
@@ -38,6 +44,7 @@ cat <<-!
 <script src="js/jquery.js"></script>
 <script src="js/draggable.min.js"></script>
 <script src="gleaner.js"></script>
+<script src="trailshow.js"></script>
 </body>
 </html>
 !

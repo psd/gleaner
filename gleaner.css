@@ -53,6 +53,12 @@ html, body {
   width: 90%;
 }
 
+#navigation .xoxo {
+  height: 90%;
+  overflow: auto;
+  resize: none;
+}
+
 #gleanings {
   width: 300px;
   height: 300px;
@@ -75,13 +81,11 @@ html, body {
   font-size: 24px;
   margin-left: 5%;
   line-height: 2em;
-  text-transform: uppercase;
   float: left;
 }
 
 .helper input.submit {
   font-size: 19px;
-  text-transform: uppercase;
   border: none;
   background-color: #000;
   color: #fff;
@@ -105,7 +109,7 @@ html, body {
 .helper li {
   margin: 0.25em 5%;
   text-indent: -999px;
-  line-height: 2px;
+  line-height: 0.5em;
 }
 
 .helper a {
@@ -115,8 +119,23 @@ html, body {
     display: block;
 }
 
+.helper li.visited,
+.helper li.visited a {
+    background-color: #eee;
+}
+
+.helper li.selected,
+.helper li.selected a {
+    background-color: #ff0000;
+}
+
 .helper textarea {
   margin: 1em 5%;
   width: 90%;
   height: 225px;
 }
+
+#status {
+    margin: 1em;
+}
+
