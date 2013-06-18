@@ -1,0 +1,122 @@
+* {
+  margin: 0;
+  padding: 0;
+}
+
+html, body {
+  height: 100%;
+  min-height: 100%;
+  font-family: "Helvetica Neue", Helvetica, sans-serif;
+}
+
+#header {
+  position: absolute;
+  top: 0;
+  left: 0;
+  right: 0;
+  height: 48px;
+  overflow: hidden;
+  border-bottom: 2px solid #888;
+}
+
+#content {
+  height: 300px;
+  width: 100%;
+  border: none;
+  position: absolute;
+  top: 50px;
+  left: 0;
+}
+
+.slider {
+  font-size: 42px;
+  font-weight: normal;
+  color: #888;
+  cursor: pointer;
+  height: 50px;
+  width: 50px;
+}
+
+.slider:hover {
+    color: #000;
+}
+
+#navigation {
+  width: 200px;
+  height: 600px;
+  top: 60px;
+  left: 20px;
+  z-index: 5;
+}
+
+#navigation h2 {
+  width: 90%;
+}
+
+#gleanings {
+  width: 300px;
+  height: 300px;
+  top: 60px;
+  right: 20px;
+  z-index: 10;
+}
+
+.helper {
+  background-color: #fff;
+  position: absolute;
+  resize: both;
+  overflow: auto;
+  border: 2px solid #888;
+  -webkit-box-shadow: 0px 2px 5px 1px rgba(0,0,0,0.5);
+  opacity: 0.85;
+}
+
+.helper h2 {
+  font-size: 24px;
+  margin-left: 5%;
+  line-height: 2em;
+  text-transform: uppercase;
+  float: left;
+}
+
+.helper input.submit {
+  font-size: 19px;
+  text-transform: uppercase;
+  border: none;
+  background-color: #000;
+  color: #fff;
+  line-height: 1.5em;
+  padding: 0 1em;
+  margin: 0.5em 5%;
+  float: right;
+}
+
+.helper input.submit:hover {
+  text-shadow: 0.1em 0.1em #666;
+}
+
+.helper ol {
+  display: block;
+  float: left;
+  list-style: none;
+  width: 100%;
+}
+
+.helper li {
+  margin: 0.25em 5%;
+  text-indent: -999px;
+  line-height: 2px;
+}
+
+.helper a {
+    width: 100%;
+    color: #000;
+    background-color: #000;
+    display: block;
+}
+
+.helper textarea {
+  margin: 1em 5%;
+  width: 90%;
+  height: 225px;
+}
