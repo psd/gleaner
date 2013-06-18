@@ -1,17 +1,8 @@
 #!/bin/sh
 
-domain=$1
-domain=${domain:=www.homesandcommunities.co.uk}
-
-cachedir=./cache
-cachefile=$cachedir/$domain
-
 set -e
-
-mkdir -p cache
-[ ! -f $cachefile ] && curl -s "http://wayback.archive.org/web/*/$domain*" > $cachefile
-
-exec > index.html
+domain=$1
+domain=${domain:?}
 
 cat <<-!
 <!doctype html>
@@ -35,8 +26,7 @@ cat <<-!
   <ol class="xoxo presentation">
 !
 
-cat  $cachefile |
-    sed -e 's/<td/\
+sed -e 's/<td/\
 <td/g' |
     grep '<a ' |
     sed -e 's/^.*>http/http/' -e 's/<.*$//' -e '/^ *$/d' -e "s/$domain:80\//$domain\//" |
