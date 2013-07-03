@@ -93,6 +93,7 @@ html, body {
   padding: 0 1em;
   margin: 0.5em 5%;
   float: right;
+  cursor: pointer;
 }
 
 .helper input.submit:hover {
@@ -107,25 +108,29 @@ html, body {
 }
 
 .helper li {
+  display: block;
   margin: 0.25em 5%;
   text-indent: -999px;
   line-height: 0.5em;
+  width: 90%;
+  color: #000;
+  background-color: #000;
+  cursor: pointer;
+}
+
+.presentation li:before {
+  content: "◎";
 }
 
 .helper a {
-    width: 100%;
-    color: #000;
-    background-color: #000;
-    display: block;
+    display: none;
 }
 
-.helper li.visited,
-.helper li.visited a {
+.helper li.visited {
     background-color: #eee;
 }
 
-.helper li.selected,
-.helper li.selected a {
+.helper li.selected {
     background-color: #ff0000;
 }
 

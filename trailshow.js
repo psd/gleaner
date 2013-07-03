@@ -37,7 +37,7 @@
 		window.location.hash = index;
 	}
 
-	$('#navigation li a').click(function() {
+	$(list).click(function() {
 		slide($(list).index(this));
 	});
 
